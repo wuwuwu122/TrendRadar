@@ -60,7 +60,7 @@ def load_config():
     webhooks = notification.get("webhooks", {})
 
     config["FEISHU_WEBHOOK_URL"] = os.environ.get(
-        "FEISHU_WEBHOOK_URL", "https://www.feishu.cn/flow/api/trigger-webhook/cb72019fa73eaaa08290c8a674dc0b86"
+        "FEISHU_WEBHOOK_URL", ""
     ).strip() or webhooks.get("feishu_url", "")
     config["DINGTALK_WEBHOOK_URL"] = os.environ.get(
         "DINGTALK_WEBHOOK_URL", ""
